@@ -6,6 +6,8 @@
 //
 
 import AppKit
+import RxSwift
+
 
 //一级菜单目录
 let menuDesc = [("偏好设置"     ,itemSetting),

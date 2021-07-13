@@ -6,18 +6,28 @@
 //
 
 import Cocoa
+import HotKey
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var mainWindowController = MainWindowController.init()
+    lazy var mainWindowController: MainWindowController = {
+        return MainWindowController()
+    }()
     
+    let triggerHotKey = HotKey(key: .upArrow, modifiers: .command)
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         //导航栏菜单配置
         makeUpStatusBar()
         //剪贴板UI配置
         makeUpMainWindow()
+        
+        triggerHotKey.keyDownHandler = {
+            Action.StatusBar.ItemTap.onNext(())
+        }
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -148,7 +158,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc
     func statusItemClick() {
-        mainWindowController.statusItemClick()
+        Action.StatusBar.ItemTap.onNext(())
     }
 
     func makeMenu(name:String, menus:[(String,()->())]) -> NSMenu {

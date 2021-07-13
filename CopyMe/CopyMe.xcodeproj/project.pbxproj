@@ -3,20 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4312845E269826CC00FEADF4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4312845D269826CC00FEADF4 /* RxSwift */; };
+		43128460269826CC00FEADF4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4312845F269826CC00FEADF4 /* RxCocoa */; };
+		43128462269826CC00FEADF4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 43128461269826CC00FEADF4 /* RxRelay */; };
+		4312846B269865BA00FEADF4 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4312846A269865BA00FEADF4 /* MainWindowController.swift */; };
+		4312846D269867F400FEADF4 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4312846C269867F400FEADF4 /* MainWindow.swift */; };
+		4312846F2698682E00FEADF4 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4312846E2698682E00FEADF4 /* MainContentView.swift */; };
+		431284712698692900FEADF4 /* MainContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431284702698692900FEADF4 /* MainContentViewController.swift */; };
+		43128473269869A000FEADF4 /* Ruler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43128472269869A000FEADF4 /* Ruler.swift */; };
 		431D26602691932000D318FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431D265F2691932000D318FF /* AppDelegate.swift */; };
 		431D26632691932000D318FF /* CopyMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 431D26612691932000D318FF /* CopyMe.xcdatamodeld */; };
 		431D26652691932400D318FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431D26642691932400D318FF /* Assets.xcassets */; };
 		431D26682691932400D318FF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431D26662691932400D318FF /* MainMenu.xib */; };
-		431D26752691CAD800D318FF /* StatusBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431D26742691CAD800D318FF /* StatusBarConfig.swift */; };
-		431D267C2691EEDA00D318FF /* PasteboardUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431D267B2691EEDA00D318FF /* PasteboardUI.swift */; };
-		431D26802691FA5200D318FF /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431D267F2691FA5200D318FF /* Controllers.swift */; };
+		431D26752691CAD800D318FF /* StatusBarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431D26742691CAD800D318FF /* StatusBarMenu.swift */; };
+		4379FAAF2698BD2C005A9F3C /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379FAAE2698BD2C005A9F3C /* Actions.swift */; };
+		4379FAB1269C02D7005A9F3C /* CopyMePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379FAB0269C02D7005A9F3C /* CopyMePanelViewController.swift */; };
+		4379FAB3269C0C87005A9F3C /* CopyMePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379FAB2269C0C87005A9F3C /* CopyMePanelView.swift */; };
+		4379FAB9269C1A9E005A9F3C /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 4379FAB8269C1A9E005A9F3C /* HotKey */; };
+		4379FABB269C1D5A005A9F3C /* RXExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379FABA269C1D5A005A9F3C /* RXExtension.swift */; };
+		4379FABD269C58D5005A9F3C /* CopyMeContentitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379FABC269C58D5005A9F3C /* CopyMeContentitem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4312846A269865BA00FEADF4 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		4312846C269867F400FEADF4 /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
+		4312846E2698682E00FEADF4 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
+		431284702698692900FEADF4 /* MainContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentViewController.swift; sourceTree = "<group>"; };
+		43128472269869A000FEADF4 /* Ruler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ruler.swift; sourceTree = "<group>"; };
 		431D265C2691932000D318FF /* CopyMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopyMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		431D265F2691932000D318FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		431D26622691932000D318FF /* CopyMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CopyMe.xcdatamodel; sourceTree = "<group>"; };
@@ -24,9 +41,12 @@
 		431D26672691932400D318FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		431D26692691932400D318FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431D266A2691932400D318FF /* CopyMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CopyMe.entitlements; sourceTree = "<group>"; };
-		431D26742691CAD800D318FF /* StatusBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarConfig.swift; sourceTree = "<group>"; };
-		431D267B2691EEDA00D318FF /* PasteboardUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardUI.swift; sourceTree = "<group>"; };
-		431D267F2691FA5200D318FF /* Controllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controllers.swift; sourceTree = "<group>"; };
+		431D26742691CAD800D318FF /* StatusBarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarMenu.swift; sourceTree = "<group>"; };
+		4379FAAE2698BD2C005A9F3C /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		4379FAB0269C02D7005A9F3C /* CopyMePanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyMePanelViewController.swift; sourceTree = "<group>"; };
+		4379FAB2269C0C87005A9F3C /* CopyMePanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyMePanelView.swift; sourceTree = "<group>"; };
+		4379FABA269C1D5A005A9F3C /* RXExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXExtension.swift; sourceTree = "<group>"; };
+		4379FABC269C58D5005A9F3C /* CopyMeContentitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyMeContentitem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,12 +54,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43128462269826CC00FEADF4 /* RxRelay in Frameworks */,
+				43128460269826CC00FEADF4 /* RxCocoa in Frameworks */,
+				4379FAB9269C1A9E005A9F3C /* HotKey in Frameworks */,
+				4312845E269826CC00FEADF4 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		431284652698643500FEADF4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				43128472269869A000FEADF4 /* Ruler.swift */,
+				4379FAAE2698BD2C005A9F3C /* Actions.swift */,
+				4379FABA269C1D5A005A9F3C /* RXExtension.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		431284662698643500FEADF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		431284672698643500FEADF4 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				431D26742691CAD800D318FF /* StatusBarMenu.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		431284682698643500FEADF4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4379FAB4269C103A005A9F3C /* Cells */,
+				4379FAB6269C103A005A9F3C /* Views */,
+				4379FAB5269C103A005A9F3C /* Widget */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		431284692698643500FEADF4 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				4312846A269865BA00FEADF4 /* MainWindowController.swift */,
+				431284702698692900FEADF4 /* MainContentViewController.swift */,
+				4379FAB0269C02D7005A9F3C /* CopyMePanelViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		431D26532691932000D318FF = {
 			isa = PBXGroup;
 			children = (
@@ -59,10 +128,12 @@
 		431D265E2691932000D318FF /* CopyMe */ = {
 			isa = PBXGroup;
 			children = (
-				431D267F2691FA5200D318FF /* Controllers.swift */,
-				431D267B2691EEDA00D318FF /* PasteboardUI.swift */,
-				431D26742691CAD800D318FF /* StatusBarConfig.swift */,
 				431D265F2691932000D318FF /* AppDelegate.swift */,
+				431284672698643500FEADF4 /* Config */,
+				431284652698643500FEADF4 /* Util */,
+				431284662698643500FEADF4 /* Model */,
+				431284692698643500FEADF4 /* VC */,
+				431284682698643500FEADF4 /* View */,
 				431D26642691932400D318FF /* Assets.xcassets */,
 				431D26662691932400D318FF /* MainMenu.xib */,
 				431D26692691932400D318FF /* Info.plist */,
@@ -70,6 +141,31 @@
 				431D26612691932000D318FF /* CopyMe.xcdatamodeld */,
 			);
 			path = CopyMe;
+			sourceTree = "<group>";
+		};
+		4379FAB4269C103A005A9F3C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4379FABC269C58D5005A9F3C /* CopyMeContentitem.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4379FAB5269C103A005A9F3C /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		4379FAB6269C103A005A9F3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4312846C269867F400FEADF4 /* MainWindow.swift */,
+				4312846E2698682E00FEADF4 /* MainContentView.swift */,
+				4379FAB2269C0C87005A9F3C /* CopyMePanelView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +184,12 @@
 			dependencies = (
 			);
 			name = CopyMe;
+			packageProductDependencies = (
+				4312845D269826CC00FEADF4 /* RxSwift */,
+				4312845F269826CC00FEADF4 /* RxCocoa */,
+				43128461269826CC00FEADF4 /* RxRelay */,
+				4379FAB8269C1A9E005A9F3C /* HotKey */,
+			);
 			productName = CopyMe;
 			productReference = 431D265C2691932000D318FF /* CopyMe.app */;
 			productType = "com.apple.product-type.application";
@@ -115,6 +217,10 @@
 				Base,
 			);
 			mainGroup = 431D26532691932000D318FF;
+			packageReferences = (
+				4312845C269826CC00FEADF4 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				4379FAB7269C1A9E005A9F3C /* XCRemoteSwiftPackageReference "HotKey" */,
+			);
 			productRefGroup = 431D265D2691932000D318FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,11 +247,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431D267C2691EEDA00D318FF /* PasteboardUI.swift in Sources */,
-				431D26752691CAD800D318FF /* StatusBarConfig.swift in Sources */,
+				4379FAB3269C0C87005A9F3C /* CopyMePanelView.swift in Sources */,
+				431D26752691CAD800D318FF /* StatusBarMenu.swift in Sources */,
+				4379FABD269C58D5005A9F3C /* CopyMeContentitem.swift in Sources */,
+				431284712698692900FEADF4 /* MainContentViewController.swift in Sources */,
+				4312846B269865BA00FEADF4 /* MainWindowController.swift in Sources */,
+				4312846F2698682E00FEADF4 /* MainContentView.swift in Sources */,
 				431D26632691932000D318FF /* CopyMe.xcdatamodeld in Sources */,
+				4379FAAF2698BD2C005A9F3C /* Actions.swift in Sources */,
+				43128473269869A000FEADF4 /* Ruler.swift in Sources */,
 				431D26602691932000D318FF /* AppDelegate.swift in Sources */,
-				431D26802691FA5200D318FF /* Controllers.swift in Sources */,
+				4312846D269867F400FEADF4 /* MainWindow.swift in Sources */,
+				4379FAB1269C02D7005A9F3C /* CopyMePanelViewController.swift in Sources */,
+				4379FABB269C1D5A005A9F3C /* RXExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +458,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4312845C269826CC00FEADF4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+		4379FAB7269C1A9E005A9F3C /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4312845D269826CC00FEADF4 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4312845C269826CC00FEADF4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		4312845F269826CC00FEADF4 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4312845C269826CC00FEADF4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		43128461269826CC00FEADF4 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4312845C269826CC00FEADF4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		4379FAB8269C1A9E005A9F3C /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4379FAB7269C1A9E005A9F3C /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		431D26612691932000D318FF /* CopyMe.xcdatamodeld */ = {
