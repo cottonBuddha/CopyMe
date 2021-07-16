@@ -14,7 +14,6 @@ class MainContentViewController: NSViewController {
     let disposeBag = DisposeBag()
     var isShow = false
     let panelVC = CopyMePanelViewController()
-    let btn = NSButton.init(frame: NSRect.init(x: 100, y: 100, width: 100, height: 100))
 
     //MARK:初始化方法
     init() {
@@ -35,16 +34,16 @@ class MainContentViewController: NSViewController {
         view.addSubview(panelVC.view)
     }
     
-    @objc
-    func hahahah() {
-        print("sdsdsdsd")
-    }
-
-    
     func layoutUI() {
         panelVC.view.frame = NSRect.init(x: isShow ? 0 : -Ruler.Size.MainPanelWidth, y: 0, width: Ruler.Size.MainPanelWidth, height: Ruler.Size.MainPanelHeight)
     }
     
+    @objc
+    func hahahah() {
+//        CopyMeCore.shared.get()
+        print("sdsdsdsd")
+    }
+
 
     func bindAction() {
         Action.StatusBar.ItemTap.subscribe({[weak self] _ in
@@ -62,12 +61,25 @@ class MainContentViewController: NSViewController {
     
     //MARK:细则
     func showPanel(_ isShow:Bool) {
+        if isShow {
+            Action.Pateboard.BoardWillShow.onNext(())
+        } else {
+            Action.Pateboard.BoardWillHide.onNext(())
+        }
         NSAnimationContext.runAnimationGroup { (context) in
             context.allowsImplicitAnimation = true
             context.duration = 0.2
             context.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
             panelVC.view.frame = NSRect.init(x: isShow ? 0 : -Ruler.Size.MainPanelWidth, y: 0, width: Ruler.Size.MainPanelWidth, height: Ruler.Size.MainPanelHeight)
+        } completionHandler: {
+            if isShow {
+                Action.Pateboard.BoardDidShow.onNext(())
+            } else {
+                Action.Pateboard.BoardDidHide.onNext(())
+            }
         }
+
+        
     }
         
     override func validateProposedFirstResponder(_ responder: NSResponder, for event: NSEvent?) -> Bool {

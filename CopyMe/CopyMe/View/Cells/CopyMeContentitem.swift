@@ -34,11 +34,14 @@ class CopyMeContentitem: NSCollectionViewItem {
         view = contentView
         view.wantsLayer = true
 //        view.layer?.backgroundColor = NSColor.green.cgColor
+//        view.layer?.cornerRadius = 20
+        
     }
     
     override func viewWillLayout() {
         super.viewWillLayout()
-        visualView.frame = view.bounds
+        visualView.frame = CGRect.init(x: 10, y: 0, width: Ruler.Size.MainPanelWidth - 20, height: Ruler.Size.MainPanelHeight)
+        visualView.layer?.cornerRadius = 20
     }
     
     func configure(name: String) {

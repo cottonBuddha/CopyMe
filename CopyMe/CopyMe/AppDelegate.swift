@@ -21,6 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         //导航栏菜单配置
         makeUpStatusBar()
+        CopyMeCore.shared
         //剪贴板UI配置
         makeUpMainWindow()
         

@@ -7,7 +7,7 @@
 
 import Cocoa
 import RxSwift
-import RxCocoa
+//import RxCocoa
 
 class MainWindowController: NSWindowController,NSWindowDelegate {
     
@@ -27,14 +27,16 @@ class MainWindowController: NSWindowController,NSWindowDelegate {
         contentViewController = MainContentViewController()
         
         registerNotifications()
-        Action.StatusBar.ItemTap.subscribe({[weak self] _ in
-            guard let self = self else {return}
-            guard let window = self.window else {return}
-            self.isKey ? window.resignKey() : window.makeKey();
-            self.isKey = !self.isKey
-        }).disposed(by: disposeBag)
+        Action.Pateboard.BoardWillShow.subscribe { [weak self] _ in
+            guard let self = self, let window = self.window else {return}
+            window.makeKey();
+        }.disposed(by: disposeBag)
+        Action.Pateboard.BoardDidHide.subscribe { [weak self] _ in
+            guard let self = self, let window = self.window else {return}
+            window.resignKey()
+        }.disposed(by: disposeBag)
 
-        Action.Noti.UnmountApp.subscribe {[weak self] _ in
+        Action.Noti.ChangeSpace.subscribe {[weak self] _ in
             guard let self = self else {return}
             if !self.isKey {
                 window.resignKey()

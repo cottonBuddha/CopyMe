@@ -6,9 +6,9 @@
 //
 
 import Cocoa
-import RxCocoa
 import RxSwift
 import HotKey
+import RxRelay
 
 struct Action {
     
@@ -23,9 +23,22 @@ struct Action {
 
     }
     
+    struct App {
+        static let FrontApp = BehaviorRelay<NSRunningApplication?>(value: nil)
+
+    }
+    
     struct HotKey {
         
     }
+    
+    struct Pateboard {
+        static var BoardWillShow = PublishSubject<Void>()
+        static var BoardDidShow  = PublishSubject<Void>()
+        static var BoardWillHide = PublishSubject<Void>()
+        static var BoardDidHide  = PublishSubject<Void>()
+    }
+    
 }
 
 class HotKeyManager {

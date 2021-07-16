@@ -13,8 +13,6 @@ class CopyMePanelView: NSView {
     let searchBar = NSView.init()
     var scrollViewCollectionView = NSScrollView()
     
-    let btn = NSButton.init(frame: NSRect.init(x: 100, y: 100, width: 100, height: 100))
-
     lazy var collectionView: NSCollectionView = {
         let flowLayout = NSCollectionViewFlowLayout()
         flowLayout.itemSize = NSSize(width: Ruler.Size.MainPanelWidth, height: 200.0)
@@ -47,7 +45,7 @@ class CopyMePanelView: NSView {
         super.init(frame: frameRect)
         wantsLayer = true
 //        addSubview(visualView)
-        addSubview(bgImgView)
+//        addSubview(bgImgView)
         
         scrollViewCollectionView.drawsBackground = false
         scrollViewCollectionView.backgroundColor = NSColor.clear
@@ -59,20 +57,8 @@ class CopyMePanelView: NSView {
         scrollViewCollectionView.scrollerInsets = NSEdgeInsets(top:0, left:0, bottom:0, right:-20)
         addSubview(scrollViewCollectionView)
 
-
-        
-        btn.wantsLayer = true
-        btn.layer?.backgroundColor = NSColor.green.cgColor
-        btn.action = #selector(CopyMePanelView.hahahah)
-        addSubview(btn)
-
     }
 
-    @objc
-    func hahahah() {
-        print("sdsddsdsds")
-    }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -88,6 +74,8 @@ class CopyMePanelView: NSView {
 
         // Drawing code here.
     }
+    
+    
     
 }
 

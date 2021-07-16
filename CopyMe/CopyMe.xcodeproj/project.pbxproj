@@ -26,6 +26,9 @@
 		4379FAB9269C1A9E005A9F3C /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 4379FAB8269C1A9E005A9F3C /* HotKey */; };
 		4379FABB269C1D5A005A9F3C /* RXExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379FABA269C1D5A005A9F3C /* RXExtension.swift */; };
 		4379FABD269C58D5005A9F3C /* CopyMeContentitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379FABC269C58D5005A9F3C /* CopyMeContentitem.swift */; };
+		4379FAC0269E92C3005A9F3C /* CopyMeCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379FABF269E92C3005A9F3C /* CopyMeCore.swift */; };
+		4399A79426A13F4A005C6AE2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4399A79326A13F4A005C6AE2 /* RealmSwift */; };
+		4399A79626A19AF8005C6AE2 /* CopyMeItemCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4399A79526A19AF8005C6AE2 /* CopyMeItemCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,8 @@
 		4379FAB2269C0C87005A9F3C /* CopyMePanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyMePanelView.swift; sourceTree = "<group>"; };
 		4379FABA269C1D5A005A9F3C /* RXExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXExtension.swift; sourceTree = "<group>"; };
 		4379FABC269C58D5005A9F3C /* CopyMeContentitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyMeContentitem.swift; sourceTree = "<group>"; };
+		4379FABF269E92C3005A9F3C /* CopyMeCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyMeCore.swift; sourceTree = "<group>"; };
+		4399A79526A19AF8005C6AE2 /* CopyMeItemCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyMeItemCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +62,7 @@
 				43128462269826CC00FEADF4 /* RxRelay in Frameworks */,
 				43128460269826CC00FEADF4 /* RxCocoa in Frameworks */,
 				4379FAB9269C1A9E005A9F3C /* HotKey in Frameworks */,
+				4399A79426A13F4A005C6AE2 /* RealmSwift in Frameworks */,
 				4312845E269826CC00FEADF4 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,11 +80,12 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		431284662698643500FEADF4 /* Model */ = {
+		431284662698643500FEADF4 /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				4399A79526A19AF8005C6AE2 /* CopyMeItemCellModel.swift */,
 			);
-			path = Model;
+			path = VM;
 			sourceTree = "<group>";
 		};
 		431284672698643500FEADF4 /* Config */ = {
@@ -92,6 +99,7 @@
 		431284682698643500FEADF4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				431284692698643500FEADF4 /* VC */,
 				4379FAB4269C103A005A9F3C /* Cells */,
 				4379FAB6269C103A005A9F3C /* Views */,
 				4379FAB5269C103A005A9F3C /* Widget */,
@@ -129,10 +137,10 @@
 			isa = PBXGroup;
 			children = (
 				431D265F2691932000D318FF /* AppDelegate.swift */,
+				431284662698643500FEADF4 /* VM */,
+				4379FABE269E929A005A9F3C /* CopyCore */,
 				431284672698643500FEADF4 /* Config */,
 				431284652698643500FEADF4 /* Util */,
-				431284662698643500FEADF4 /* Model */,
-				431284692698643500FEADF4 /* VC */,
 				431284682698643500FEADF4 /* View */,
 				431D26642691932400D318FF /* Assets.xcassets */,
 				431D26662691932400D318FF /* MainMenu.xib */,
@@ -168,6 +176,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4379FABE269E929A005A9F3C /* CopyCore */ = {
+			isa = PBXGroup;
+			children = (
+				4379FABF269E92C3005A9F3C /* CopyMeCore.swift */,
+			);
+			path = CopyCore;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,6 +205,7 @@
 				4312845F269826CC00FEADF4 /* RxCocoa */,
 				43128461269826CC00FEADF4 /* RxRelay */,
 				4379FAB8269C1A9E005A9F3C /* HotKey */,
+				4399A79326A13F4A005C6AE2 /* RealmSwift */,
 			);
 			productName = CopyMe;
 			productReference = 431D265C2691932000D318FF /* CopyMe.app */;
@@ -220,6 +237,7 @@
 			packageReferences = (
 				4312845C269826CC00FEADF4 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				4379FAB7269C1A9E005A9F3C /* XCRemoteSwiftPackageReference "HotKey" */,
+				4399A79226A13F4A005C6AE2 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 431D265D2691932000D318FF /* Products */;
 			projectDirPath = "";
@@ -253,6 +271,7 @@
 				431284712698692900FEADF4 /* MainContentViewController.swift in Sources */,
 				4312846B269865BA00FEADF4 /* MainWindowController.swift in Sources */,
 				4312846F2698682E00FEADF4 /* MainContentView.swift in Sources */,
+				4399A79626A19AF8005C6AE2 /* CopyMeItemCellModel.swift in Sources */,
 				431D26632691932000D318FF /* CopyMe.xcdatamodeld in Sources */,
 				4379FAAF2698BD2C005A9F3C /* Actions.swift in Sources */,
 				43128473269869A000FEADF4 /* Ruler.swift in Sources */,
@@ -260,6 +279,7 @@
 				4312846D269867F400FEADF4 /* MainWindow.swift in Sources */,
 				4379FAB1269C02D7005A9F3C /* CopyMePanelViewController.swift in Sources */,
 				4379FABB269C1D5A005A9F3C /* RXExtension.swift in Sources */,
+				4379FAC0269E92C3005A9F3C /* CopyMeCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +496,14 @@
 				minimumVersion = 0.1.3;
 			};
 		};
+		4399A79226A13F4A005C6AE2 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.10.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -498,6 +526,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4379FAB7269C1A9E005A9F3C /* XCRemoteSwiftPackageReference "HotKey" */;
 			productName = HotKey;
+		};
+		4399A79326A13F4A005C6AE2 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4399A79226A13F4A005C6AE2 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 
